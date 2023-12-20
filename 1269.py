@@ -1,0 +1,6 @@
+n, m = map(int, input().split())
+a = set(map(int, input().split()))
+b = set(map(int, input().split()))
+# count = len(a | b) - len(a & b)
+count = len(a-b) + len(b-a)
+print(count)

@@ -1,0 +1,2 @@
+password = input()
+print(password + '??!') 
