@@ -16,7 +16,7 @@ int main(void) {
     count = strlen(hex);
     end = count - 1;
 
-    for (int i = end; i >= 0; i--) { // ì‹œì‘ ê¸€ì(ë§¨ ë’¤)ì˜ ì¸ë±ìŠ¤ë¶€í„° ì•ìœ¼ë¡œ íƒìƒ‰ [0, 1, 2, ..., end]
+    for (int i = end; i >= 0; i--) { // ½ÃÀÛ ±ÛÀÚ(¸Ç µÚ)ÀÇ ÀÎµ¦½ººÎÅÍ ¾ÕÀ¸·Î Å½»ö [0, 1, 2, ..., end]
         decimal = hexToDecimal(hex[i]);
         result += (decimal * pow(16, end - i));
     }
@@ -32,17 +32,18 @@ char hexToDecimal(char ch) {
     if ('0' <= ch && ch <= '9') {
         decimal = ch - '0';
         return decimal;
-    } else {
+    }
+    else {
         switch (ch) {
-            case 'A': decimal = 10; break;
-            case 'B': decimal = 11; break; 
-            case 'C': decimal = 12; break;
-            case 'D': decimal = 13; break;
-            case 'E': decimal = 14; break;
-            case 'F': decimal = 15; break;
+        case 'A': decimal = 10; break;
+        case 'B': decimal = 11; break;
+        case 'C': decimal = 12; break;
+        case 'D': decimal = 13; break;
+        case 'E': decimal = 14; break;
+        case 'F': decimal = 15; break;
         }
         return decimal;
     }
-    
+
 }
 
